@@ -14,7 +14,7 @@ class CalculatePriceSpec extends WordSpec with Matchers {
   val skus = Seq(sku, sku1, sku2, sku3)
 
   "Given a single sku, calculatePrice" should {
-    "return 50 for 1 item" in {
+    "return .5 for 1 item" in {
       val checkoutItem: Map[String, Int] = Map("A" -> 1)
       val result = CalculatePrice.getTotal(checkoutItem, skus)
       result should equal(.5)
